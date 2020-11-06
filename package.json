@@ -1,0 +1,34 @@
+{
+  "name": "my-recipes-backend",
+  "version": "1.0.0",
+  "description": "Backend for MyRecipes 2 - Node.js Rest APIs with Express, Sequelize, and MySQL",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calebjwl/my-recipes-2-backend.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "sequelize",
+    "mysql",
+    "rest",
+    "api"
+  ],
+  "author": "Caleb Lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/calebjwl/my-recipes-2-backend/issues"
+  },
+  "homepage": "https://github.com/calebjwl/my-recipes-2-backend#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.3.5"
+  }
+}
