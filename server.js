@@ -8,12 +8,12 @@ const db = require("./app/models");
 db.sequelize.sync();
 
 // Drop and re-sync during development
-// db.sequelize.sync({ force: true }).then(() => {
-//   console.log("Drop and re-sync db.");
-// });
+db.sequelize.sync({ force: true }).then(() => {
+  console.log("Drop and re-sync db.");
+});
 
 var corsOptions = {
-  origin: "http://localhost:8081"
+  origin: "http://localhost:8080"
 };
 
 app.use(cors(corsOptions));
@@ -28,6 +28,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get("/", (req, res) => {
   res.json({ message: "API TEST" });
 });
+
+require("./app/routes/recipe.routes")(app);
 
 // set port, listen for requests
 const PORT = process.env.PORT || 8080;
